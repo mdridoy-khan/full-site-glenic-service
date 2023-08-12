@@ -45,7 +45,6 @@
 
 
 
-
     // Initialize and add the map
   function initMap() {
     // The location of Uluru
@@ -173,7 +172,7 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
-                arrows: false,
+                arrows: true,
               }
             },
             {
@@ -442,7 +441,9 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       dots: true,
-      arrows: false,
+      arrows: true,
+      prevArrow:'<a><i class="fa-solid fa-arrow-left-long"></i></a>',
+      nextArrow:'<a><i class="fa-solid fa-arrow-right-long"></i></a>',
       autoplaySpeed: 1000,
       responsive: [
       {
@@ -457,6 +458,7 @@
         breakpoint: 993,
         settings: {
           slidesToShow: 2,
+          arrows: false,
           slidesToScroll: 1
         }
       },
@@ -464,6 +466,7 @@
         breakpoint: 767,
         settings: {
           slidesToShow: 2,
+          arrows: false,
           slidesToScroll: 1
         }
       },
@@ -471,6 +474,7 @@
         breakpoint: 410,
         settings: {
           slidesToShow: 1,
+          arrows: false,
           slidesToScroll: 1
         }
       }
@@ -579,29 +583,41 @@ wow.init();
     Counter Active
 -----------------------------------------------------------------------------------------*/
 
+// -----------------------------------------------------
+// ---------------   PRELOADER   -----------------------
+// -----------------------------------------------------
 
+function tokyo_tm_preloader(){
+	
+	"use strict";
+	
+	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+	var preloader = $('#preloader');
+	
+	if (!isMobile) {
+		setTimeout(function() {
+			preloader.addClass('preloaded');
+		}, 800);
+		setTimeout(function() {
+			preloader.remove();
+		}, 2000);
 
+	} else {
+		preloader.remove();
+	}
+} 
 
+// -----------------------------------------------------
+// -----------------   MY LOAD    ----------------------
+// -----------------------------------------------------
 
-
-/*---------------------------------------------------------------------------------------
-    Preloader Active
------------------------------------------------------------------------------------------*/
-    function loader() {
-        $(window).on('load', function () {
-            $('#ctn-preloader').addClass('loaded');
-            $("#loading").fadeOut(500);
-            // Una vez haya terminado el preloader aparezca el scroll
-
-            if ($('#ctn-preloader').hasClass('loaded')) {
-                // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
-                $('#preloader').delay(900).queue(function () {
-                    $(this).remove();
-                });
-            }
-        });
-    }
-    loader();
+function tokyo_tm_my_load(){
+	
+	"use strict";
+	
+	var speed	= 500;
+	setTimeout(function(){tokyo_tm_preloader();},speed);
+}
 
 /*---------------------------------------------------------------------------------------
     Side-bar Active
@@ -666,6 +682,33 @@ wow.init();
       //I get fired when you enter a section and I pass the list item of the section
     }
   });
+
+
+  // -----------------------------------------------------
+// ------------------   CURSOR    ----------------------
+// -----------------------------------------------------
+
+function tokyo_tm_cursor(){
+  "use strict";
+
+var myCursor	= jQuery('.mouse-cursor');
+
+if(myCursor.length){
+  if ($("body")) {
+      const e = document.querySelector(".cursor-inner"),
+          t = document.querySelector(".cursor-outer");
+      let n, i = 0,
+          o = !1;
+      window.onmousemove = function (s) {
+          o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+      }, $("body").on("mouseenter", "a, .cursor-pointer", function () {
+          e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
+      }), $("body").on("mouseleave", "a, .cursor-pointer", function () {
+          $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+      }), e.style.visibility = "visible", t.style.visibility = "visible"
+  }
+}
+};
 
 
 })(jQuery); 

@@ -1,1 +1,1 @@
-project-glenic-full-website
+glenic-full-website

@@ -800,3 +800,7 @@
 .pure-black{
 	background:#222222;
 }
+::selection {
+	color: red;
+	background: #878991;
+  }

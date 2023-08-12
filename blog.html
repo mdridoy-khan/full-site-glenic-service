@@ -26,19 +26,25 @@
   </head>
   <body>
 
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="loader_line"></div>
+	</div>
+	<!-- /PRELOADER -->
+
 	<!-- header area start -->
 	<header class="transparent-header" id="home">
 		<!-- header top area start -->
-		<section class="header-top-area d-none d-md-block">
+		<section class="header-top-area">
 			<div class="container">
 				<div class="row ">
-					<div class="col-xl-6 col-lg-6 col-md-7">
+					<div class="col-xl-6 col-lg-6 col-md-7 col-sm-9 d-none d-sm-block">
 						<div class="header-top-contact">
-							<a href="#">Call Me 01836292025 <span>/</span></a>
-							<a href="#">mdridoy9902@gmail.com</a>
+							<a href="tel:01836292025">Call Me 01836292025 <span>/</span></a>
+							<a href="mailto:mdridoy9902@gmail.com">mdridoy9902@gmail.com</a>
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-6 col-md-5">
+					<div class="col-xl-6 col-lg-6 col-md-5 col-sm-3 col-12">
 						<div class="header-top-right text-right">
 							<div class="header-top-icon">
 								<a href="https://www.facebook.com/majedul.majedull"><i class="fa-brands fa-facebook-f"></i></a>
@@ -46,8 +52,8 @@
 								<a href="#"><i class="fa-solid fa-globe"></i></a>
 								<a href="#"><i class="fa-brands fa-behance"></i></a>
 							</div>
-							<div class="header-talk">
-								<a href="#">Let’s talk<i class="fa-solid fa-arrow-right-long"></i></a>
+							<div class="header-talk d-none d-md-block">
+								<a href="contact-us.html">Let’s talk<i class="fa-solid fa-arrow-right-long"></i></a>
 							</div>
 						</div>
 					</div>
@@ -70,9 +76,9 @@
 							<div class="main-menu">
 								<nav id="mobile-menu">
 									<ul id="nav">
-										<li class="current"><a href="#home">Home</a>
+										<li class="current"><a href="index.html">Home</a>
 										</li>
-										<li><a href="#">pages</a>
+										<li><a href="#">pages<i class="fa-solid fa-plus"></i></a>
 											<ul class="submenu">
 												<li><a href="index.html">Home page</a></li>
 												<li><a href="about-us.html">About-us page</a></li>
@@ -87,10 +93,10 @@
 												<li><a href="contact-us.html">Contact page</a></li>
 											</ul>
 										</li>
-										<li><a href="#services">services</a></li>
-										<li><a href="#projects">projects</a></li>
-										<li><a href="#blog">Blog</a></li>
-										<li><a href="#contact">Contact</a></li>
+										<li><a href="service.html">services</a></li>
+										<li><a href="project.html">projects</a></li>
+										<li><a href="blog.html">Blog</a></li>
+										<li><a href="contact-us.html">Contact</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -99,20 +105,55 @@
 					<div class="col-xl-3 col-lg-2 d-none d-lg-block">
 						<div class="menu-right-bar-wrapper">
 							<div class="menu-right-search">
-								<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-								<div class="main-search-ber">
+								<div class="search">
 									<form action="">
-										<input type="text" placeholder="Search">
-										<button><i class="fa-solid fa-magnifying-glass"></i></button>
+										<input type="text" placeholder=" ">
+										<div>
+											<svg>
+												<use xlink:href="#path">
+											</svg>
+										</div>
 									</form>
 								</div>
+								
+								<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+									<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+										<path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+									</symbol>
+								</svg>
+								
+								<!-- dribbble -->
+								<a class="dribbble" href="https://dribbble.com/shots/5547403-Search-input-animation" target="_blank"><img src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png" alt=""></a>
 							</div>
-							<div class="menu-right-language">
+							<div class="menu-right-language d-none d-xl-block">
 								<span>FR</span>
-								<span class="language-color"><a href="#">EN<i class="fa-solid fa-angle-down"></i></a></span>
+								<span class="language-color"><a href="#">EN<i class="fa-solid fa-angle-down"></i></a>
+									<ul>
+										<li><a href="#">BN</a></li>
+										<li><a href="#">UK</a></li>
+										<li><a href="#">ARABIA</a></li>
+										<li><a href="#">LATIN</a></li>
+										<li><a href="#">SPANISH</a></li>
+									</ul>
+								</span>
 							</div>
 							<div class="menu-right-icon d-none d-xl-block">
-								<a href="#"><i class="fa-solid fa-bars"></i></a>
+								<span><img src="img/logo/hide-menu.png" alt="">
+									<div class="menu-right-content-wrapper">
+										<div class="menu-single-right-content spacing">
+											<h4>We provide the best medical services</h4>
+											<div class="main-button blog-button menu-button">
+												<a href="blog-details.html" class="btn">Read more <span><i class="fa-solid fa-arrow-right"></i></span></a>
+											</div>
+										</div>
+										<div class="menu-single-right-content">
+											<h4>Social Links</h4>
+											<a href="#"><i class="fa-brands fa-twitter"></i></a>
+											<a href="https://www.facebook.com/majedul.majedull"><i class="fa-brands fa-facebook-f"></i></a>
+											<a href="https://www.instagram.com/mdridoy3149/"><i class="fa-brands fa-instagram"></i></a>
+										</div>
+									</div>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -134,8 +175,8 @@
 						<div class="banner-wrapper">
 							<div class="banner-content text-center">
 								<h2>Blog Page</h2>
-								<a href="#">Home<i class="fa-solid fa-angle-right"></i></a>
-								<a href="#">Blog Page</a>
+								<a href="index.html">Home<i class="fa-solid fa-angle-right"></i></a>
+								<a href="blog.html">Blog Page</a>
 							</div>
 						</div>
 					</div>
@@ -330,7 +371,7 @@
 		<section class="footer-second-part pt-100 pb-100">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-12">
 						<div class="footer-second-wrapper res-second-footer">
 							<div class="footer-logo">
 								<img src="img/logo/footer-logo.png" alt="">
@@ -345,7 +386,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
+					<div class="col-xl-2 col-lg-4 col-md-3 col-sm-4 col-6">
 						<div class="footer-second-wrapper">
 							<div class="footer-second-heading">
 								<h3>quick links</h3>
@@ -362,7 +403,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
+					<div class="col-xl-2 col-lg-4 col-md-3 col-sm-6 col-6">
 						<div class="footer-second-wrapper res-third-footer">
 							<div class="footer-second-heading">
 								<h3>Service links</h3>
@@ -379,7 +420,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
 						<div class="footer-second-wrapper res-last-footer">
 							<div class="footer-second-heading">
 								<h3>quick links</h3>
